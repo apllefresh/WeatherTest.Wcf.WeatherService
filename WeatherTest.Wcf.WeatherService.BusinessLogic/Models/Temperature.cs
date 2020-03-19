@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace WeatherTest.Wcf.WeatherService.BusinessLogic.Models
 {
+    [DataContract]
     public class Temperature
     {
-        public Temperature(int degree, DateTime dateTime)
-        {
-            Degree = degree;
-            DateTime = dateTime;
-        }
-
-        public int Degree { get; }
-        public DateTime DateTime { get; }
+        [DataMember]
+        public int Degree { get; set; }
+        [DataMember]
+        public DateTime DateTime { get; set; }
     }
 }

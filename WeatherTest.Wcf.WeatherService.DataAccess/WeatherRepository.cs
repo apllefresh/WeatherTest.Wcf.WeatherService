@@ -24,6 +24,7 @@ namespace WeatherTest.Wcf.WeatherService.DataAccess
             {
                 return _dbContext.Cities
                     .Select(c => new City(c.Id, c.Name))
+                    //.Select(c => new City())
                     .ToList();
             }
         }

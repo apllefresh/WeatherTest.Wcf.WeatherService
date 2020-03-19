@@ -18,7 +18,11 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
         {
             var result = _repository.GetCities();
             return result
-                .Select(c => new City(c.Id, c.Name))
+                .Select(c => new City
+                {
+                    Id = (int)c.Id,
+                    Name = (string)c.Name
+                })
                 .ToList();
         }
 
@@ -26,7 +30,11 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
         {
             var result = _repository.GetCityWeather(cityId);
             return result
-                .Select(t => new Temperature(t.Degree, t.DateTime))
+                .Select(t => new Temperature
+                {
+                    Degree = t.Degree,
+                    DateTime = t.DateTime
+                })
                 .ToList();
         }
     }

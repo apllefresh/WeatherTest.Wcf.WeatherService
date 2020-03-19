@@ -20,8 +20,8 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
             return result
                 .Select(c => new City
                 {
-                    Id = (int)c.Id,
-                    Name = (string)c.Name
+                    Id = c.Id,
+                    Name = c.Name
                 })
                 .ToList();
         }

@@ -17,7 +17,7 @@ namespace WeatherTest.Wcf.WeatherService
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new BusinessLogic.WeatherService()
             };
             ServiceBase.Run(ServicesToRun);
         }

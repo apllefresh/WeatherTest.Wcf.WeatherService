@@ -56,5 +56,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherTest.Wcf.WeatherService.BusinessLogic\WeatherTest.Wcf.WeatherService.BusinessLogic.csproj">
+      <Project>{5e2c76f4-52a2-410b-9f89-998564a1a129}</Project>
+      <Name>WeatherTest.Wcf.WeatherService.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

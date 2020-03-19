@@ -338,3 +338,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/PrecompiledWeb/localhost_56220/*
+/PrecompiledWeb/
+/MigrationBackup/

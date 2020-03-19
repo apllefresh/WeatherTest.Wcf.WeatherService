@@ -3,9 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherTest.Wcf.WeatherService", "WeatherTest.Wcf.WeatherService\WeatherTest.Wcf.WeatherService.csproj", "{F2BE2DA4-737B-411D-9E90-E23083BE5175}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherTest.Wcf.WeatherService.BusinessLogic", "WeatherTest.Wcf.WeatherService.BusinessLogic\WeatherTest.Wcf.WeatherService.BusinessLogic.csproj", "{5E2C76F4-52A2-410B-9F89-998564A1A129}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WeatherTest.WeatherService", "WeatherTest.WeatherService\", "{2600C230-561A-463B-AC44-81B56F9361D1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{5E2C76F4-52A2-410B-9F89-998564A1A129}|WeatherTest.Wcf.WeatherService.BusinessLogic.dll;{A6A607FA-3072-4D61-8DBF-37426EAD458B}|WeatherTest.Wcf.WeatherService.DataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56220"
+		Debug.AspNetCompiler.PhysicalPath = "WeatherTest.WeatherService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56220\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56220"
+		Release.AspNetCompiler.PhysicalPath = "WeatherTest.WeatherService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56220\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56220"
+		SlnRelativePath = "WeatherTest.WeatherService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherTest.Wcf.WeatherService.DataAccess", "WeatherTest.Wcf.WeatherService.DataAccess\WeatherTest.Wcf.WeatherService.DataAccess.csproj", "{A6A607FA-3072-4D61-8DBF-37426EAD458B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{E6C97030-BC8A-4FE3-A59C-3212AD8FD53B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{8AEB58E9-7D06-47B5-919F-4D964D716026}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{B1014C16-94BA-45F2-B0FB-02A028BAAB98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +42,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2BE2DA4-737B-411D-9E90-E23083BE5175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2BE2DA4-737B-411D-9E90-E23083BE5175}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2BE2DA4-737B-411D-9E90-E23083BE5175}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2BE2DA4-737B-411D-9E90-E23083BE5175}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E2C76F4-52A2-410B-9F89-998564A1A129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E2C76F4-52A2-410B-9F89-998564A1A129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2C76F4-52A2-410B-9F89-998564A1A129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2C76F4-52A2-410B-9F89-998564A1A129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2600C230-561A-463B-AC44-81B56F9361D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2600C230-561A-463B-AC44-81B56F9361D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2600C230-561A-463B-AC44-81B56F9361D1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2600C230-561A-463B-AC44-81B56F9361D1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A6A607FA-3072-4D61-8DBF-37426EAD458B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A607FA-3072-4D61-8DBF-37426EAD458B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A607FA-3072-4D61-8DBF-37426EAD458B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A607FA-3072-4D61-8DBF-37426EAD458B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E2C76F4-52A2-410B-9F89-998564A1A129} = {E6C97030-BC8A-4FE3-A59C-3212AD8FD53B}
+		{2600C230-561A-463B-AC44-81B56F9361D1} = {B1014C16-94BA-45F2-B0FB-02A028BAAB98}
+		{A6A607FA-3072-4D61-8DBF-37426EAD458B} = {8AEB58E9-7D06-47B5-919F-4D964D716026}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B91F1E8A-E152-4A0C-9DCC-B92D0C4CEE15}

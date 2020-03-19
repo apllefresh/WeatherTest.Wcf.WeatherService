@@ -23,7 +23,7 @@ namespace WeatherTest.Wcf.WeatherService.DataAccess
             using (_dbContext)
             {
                 return _dbContext.Cities
-                    .Select(c => new City())
+                    .Select(c => new City(c.Id, c.Name))
                     .ToList();
             }
         }
@@ -34,7 +34,7 @@ namespace WeatherTest.Wcf.WeatherService.DataAccess
             {
                 return _dbContext.Temperatures
                     .Where(t => t.CityId == cityId)
-                    .Select(c => new Temperature())
+                    .Select(t =>  new Temperature(t.Degree, t.DateTime))
                     .ToList();
             }
         }

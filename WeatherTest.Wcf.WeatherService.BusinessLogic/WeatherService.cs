@@ -27,9 +27,9 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
                 .ToList();
         }
 
-        public IEnumerable<Temperature> GetCityWeather(int cityId, DateTime? dateTime = null)
+        public IEnumerable<Temperature> GetCityWeather(int cityId, DateTime dateTime)
         {
-            var result = _repository.GetCityWeather(cityId, dateTime ?? DateTime.Now);
+            var result = _repository.GetCityWeather(cityId, dateTime);
             return result
                 .Select(t => new Temperature
                 {

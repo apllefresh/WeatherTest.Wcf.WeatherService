@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using WeatherTest.DataContext;
@@ -24,17 +25,16 @@ namespace WeatherTest.Wcf.WeatherService.DataAccess
             {
                 return _dbContext.Cities
                     .Select(c => new City(c.Id, c.Name))
-                    //.Select(c => new City())
                     .ToList();
             }
         }
 
-        public IEnumerable<Temperature> GetCityWeather(int cityId)
+        public IEnumerable<Temperature> GetCityWeather(int cityId, DateTime dateTime)
         {
             using (_dbContext)
             {
                 return _dbContext.Temperatures
-                    .Where(t => t.CityId == cityId)
+                    .Where(t => t.CityId == cityId && t.DateTime.Date == dateTime.Date)
                     .Select(t =>  new Temperature(t.Degree, t.DateTime))
                     .ToList();
             }

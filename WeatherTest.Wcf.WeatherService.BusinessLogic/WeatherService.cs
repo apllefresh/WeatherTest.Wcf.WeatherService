@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using WeatherTest.Wcf.WeatherService.BusinessLogic.Models;
 using WeatherTest.Wcf.WeatherService.DataAccess;
@@ -26,9 +27,9 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
                 .ToList();
         }
 
-        public IEnumerable<Temperature> GetCityWeather(int cityId)
+        public IEnumerable<Temperature> GetCityWeather(int cityId, DateTime? dateTime = null)
         {
-            var result = _repository.GetCityWeather(cityId);
+            var result = _repository.GetCityWeather(cityId, dateTime ?? DateTime.Now);
             return result
                 .Select(t => new Temperature
                 {

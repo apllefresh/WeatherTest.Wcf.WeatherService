@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 using WeatherTest.Wcf.WeatherService.BusinessLogic.Models;
 
@@ -11,6 +12,6 @@ namespace WeatherTest.Wcf.WeatherService.BusinessLogic
         IEnumerable<City> GetCities();
 
         [OperationContract]
-        IEnumerable<Temperature> GetCityWeather(int cityId);
+        IEnumerable<Temperature> GetCityWeather(int cityId, DateTime? dateTime);
     }
 }
